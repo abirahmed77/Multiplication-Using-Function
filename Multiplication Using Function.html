@@ -2,22 +2,62 @@
 <html lang="en">
   <head>
     <title>Document</title>
+
+    <style>
+      body {
+        background-image: linear-gradient(
+          red,
+          yellow,
+          green,
+          blue,
+          violet,
+          cyan,
+          orange,
+          silver
+        );
+        background-attachment: fixed;
+      }
+    </style>
   </head>
 
   <body>
-    <h1>Multification Function</h1>
+    <h1>Summation</h1>
+    <p id="demo1"></p>
 
-    <p id="demo"></p>
+    <h1>Subtraction</h1>
+    <p id="demo2"></p>
+
+    <h1>Multiplication</h1>
+    <p id="demo3"></p>
+
+    <h1>Division</h1>
+    <p id="demo4"></p>
 
     <script>
-      var b = 8;
+      function sumFunction(x, y) {
+        var sum = x + y;
+        return sum;
+      }
+
+      function subFunction(x, y) {
+        var sub = x - y;
+        return sub;
+      }
 
       function multFunction(x, y) {
         var mult = x * y;
         return mult;
       }
 
-      document.getElementById("demo").innerHTML = multFunction(10, 5);
+      function divFunction(x, y) {
+        var div = x / y;
+        return div;
+      }
+
+      document.getElementById("demo1").innerHTML = sumFunction(15, 45);
+      document.getElementById("demo2").innerHTML = subFunction(25, 15);
+      document.getElementById("demo3").innerHTML = multFunction(10, 90);
+      document.getElementById("demo4").innerHTML = divFunction(10, 5);
     </script>
   </body>
 </html>
